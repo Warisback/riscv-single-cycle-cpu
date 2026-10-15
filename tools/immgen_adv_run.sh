@@ -19,12 +19,19 @@ rm -f "$D/immgen_adv.s" "$D/immgen_adv.expect" "$D/immgen_adv.o" "$D/immgen_adv.
 
 python3 tools/immgen_adv_gen.py "$D" "$seed" "$nrand" || exit 4
 "${RV}as" -march=rv32i -mabi=ilp32 -mno-relax -o "$D/immgen_adv.o" "$D/immgen_adv.s" || exit 5
-# A relocation would mean the assembler left a field for the linker to fill in.
-if "${RV}readelf" -r "$D/immgen_adv.o" | grep -q 'Relocation section'; then
-  echo "immgen_adv_run: object has relocations, offsets were not resolved by as"
+# binutils 2.42 leaves `.+N` branch and jump targets for the linker; 2.45 resolves
+# them in as. Either way, link once so every offset is encoded (they are
+# PC-relative, so the load address changes no word), then insist nothing is left.
+OBJ="$D/immgen_adv.o"
+if "${RV}readelf" -r "$OBJ" | grep -q 'Relocation section'; then
+  "${RV}ld" -m elf32lriscv --no-relax -Ttext=0x10000 -e 0 -o "$D/immgen_adv.elf" "$OBJ" || exit 6
+  OBJ="$D/immgen_adv.elf"
+fi
+if "${RV}readelf" -r "$OBJ" | grep -q 'Relocation section'; then
+  echo "immgen_adv_run: relocations left after linking, offsets not encoded"
   exit 6
 fi
-"${RV}objcopy" -O binary -j .text "$D/immgen_adv.o" "$D/immgen_adv.bin" || exit 7
+"${RV}objcopy" -O binary -j .text "$OBJ" "$D/immgen_adv.bin" || exit 7
 python3 tools/immgen_adv_merge.py "$D/immgen_adv.bin" "$D/immgen_adv.expect" "$D/immgen_adv_vectors.hex" || exit 8
 nvec=$(wc -l < "$D/immgen_adv.expect" | tr -d ' ')
 bash tools/run_unit.sh immgen_adv_tb +seed="$seed" +vec="$D/immgen_adv_vectors.hex" +nvec="$nvec" "$@"

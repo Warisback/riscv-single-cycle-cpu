@@ -13,7 +13,9 @@ What it does (from the repository root; tools/decoder_adv_run.sh runs it):
   2. Assembles with GNU as (found by tools/rvtools.py; -mno-relax), takes
      the words from `objcopy -O binary`, and checks:
        - one word per source line (nothing expanded or compressed),
-       - no relocations (so every branch/jump offset is really encoded),
+       - no relocations (so every branch/jump offset is really encoded). Older
+         binutils (2.42) leave `.+N` branch and jump targets as relocations, so
+         the object is then linked once and the words come from the linked file,
        - `objdump -M no-aliases` gives back the same mnemonic and word.
   3. Writes <out>/vectors.hex, one line per instruction, 48 hex digits:
        mnemonic (16 ASCII bytes, right-justified, NUL padded)
@@ -193,6 +195,10 @@ def assemble(entries, march, mabi, tag, outdir):
         for _, _, text, _ in entries:
             f.write(f"\t{text}\n")
     run([RV + "as", f"-march={march}", f"-mabi={mabi}", "-mno-relax", "-o", obj, src])
+    if "R_RISCV" in run([RV + "objdump", "-r", obj]):
+        # binutils 2.42 leaves `.+N` targets for the linker; 2.45 resolves them in as.
+        # Linking resolves every PC-relative offset; the load address does not matter.
+        obj = rvtools.link_resolved(RV, obj, os.path.join(outdir, f"{tag}.elf"), mabi)
     run([RV + "objcopy", "-O", "binary", "-j", ".text", obj, binf])
     data = open(binf, "rb").read()
     words = [int.from_bytes(data[i:i + 4], "little") for i in range(0, len(data), 4)]
