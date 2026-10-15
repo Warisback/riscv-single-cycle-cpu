@@ -1,0 +1,19 @@
+# 2026-10-15T07:57:04Z  sw/smoke.S with a VCD dump, figure docs/images/timing_smoke.svg
+VCD info: dumpfile build/sc/smoke.vcd opened for output.
+TOHOST=00000001
+PASS 17 instructions, 17 cycles, CPI 1.000, 0 assertion failures
+tb/sc_core_tb.sv:209: $finish called at 170000 (1ps)
+vcd2svg: build/sc/smoke.vcd -> docs/images/timing_smoke.svg: 9 signals, cycles 4..13 (clock period 10000 time units)
+cycle  pc        instr              alu_y     result    reg_write  dmem_we  pc_src  pc_next
+    4  00000010  lui x5,0x8         00008000  00008000  1          0        0       00000014
+    5  00000014  lw x6,0(x5)        00008000  12345678  1          0        0       00000018
+    6  00000018  lui x10,0x12345    12345000  12345000  1          0        0       0000001c
+    7  0000001c  addi x10,x10,1656  12345678  12345678  1          0        0       00000020
+    8  00000020  bne x6,x10,fail    2468acf0  2468acf0  0          0        0       00000024
+    9  00000024  sw x3,4(x5)        00008004  00008004  0          1        0       00000028
+   10  00000028  lw x7,4(x5)        00008004  0000000c  1          0        0       0000002c
+   11  0000002c  beq x7,x3,ok       00000018  00000018  0          0        1       00000034
+   12  00000034  jal x1,done        00000000  00000038  1          0        1       0000003c
+   13  0000003c  lui x8,0x10        00010000  00010000  1          0        0       00000040
+PASS wave: build/sc/smoke.vcd and docs/images/timing_smoke.svg written
+# elapsed 2 s

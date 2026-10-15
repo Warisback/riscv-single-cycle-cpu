@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 346" font-family="Segoe UI, 'Helvetica Neue', 'DejaVu Sans', Arial, sans-serif" role="img" aria-label="Timing diagram of sw/smoke.S on the single-cycle core, cycles 4 to 13: clock, PC, the instruction in each cycle, ALU result, write-back value, register write enable, data memory write enable, branch or jump taken, and next PC">
+<rect x="0" y="0" width="1000" height="346" fill="#ffffff"/>
+<text x="10" y="17" font-size="13" font-weight="600" fill="#18201f">sw/smoke.S on the single-cycle core: one instruction per clock cycle</text>
+<text x="10" y="42" font-size="11" fill="#5a6866">cycle</text>
+<text x="180.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">4</text>
+<text x="265.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">5</text>
+<text x="350.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">6</text>
+<text x="435.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">7</text>
+<text x="520.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">8</text>
+<text x="605.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">9</text>
+<text x="690.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">10</text>
+<text x="775.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">11</text>
+<text x="860.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">12</text>
+<text x="945.5" y="42" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11" text-anchor="middle" fill="#5a6866">13</text>
+<line x1="138.0" y1="46" x2="138.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="223.0" y1="46" x2="223.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="308.0" y1="46" x2="308.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="393.0" y1="46" x2="393.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="478.0" y1="46" x2="478.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="563.0" y1="46" x2="563.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="648.0" y1="46" x2="648.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="733.0" y1="46" x2="733.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="818.0" y1="46" x2="818.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="903.0" y1="46" x2="903.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="988.0" y1="46" x2="988.0" y2="316.0" stroke="#d5dcda" stroke-width="0.8" stroke-dasharray="2 3"/>
+<text x="10" y="64.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">clk</text>
+<path d="M138.0,52.0 L180.5,52.0 L180.5,68.0 L223.0,68.0 L223.0,52.0 L265.5,52.0 L265.5,68.0 L308.0,68.0 L308.0,52.0 L350.5,52.0 L350.5,68.0 L393.0,68.0 L393.0,52.0 L435.5,52.0 L435.5,68.0 L478.0,68.0 L478.0,52.0 L520.5,52.0 L520.5,68.0 L563.0,68.0 L563.0,52.0 L605.5,52.0 L605.5,68.0 L648.0,68.0 L648.0,52.0 L690.5,52.0 L690.5,68.0 L733.0,68.0 L733.0,52.0 L775.5,52.0 L775.5,68.0 L818.0,68.0 L818.0,52.0 L860.5,52.0 L860.5,68.0 L903.0,68.0 L903.0,52.0 L945.5,52.0 L945.5,68.0 L988.0,68.0" fill="none" stroke="#18201f" stroke-width="1.4" stroke-linejoin="miter"/>
+<text x="10" y="88.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">pc</text>
+<text x="10" y="99.0" font-size="10" fill="#5a6866">PC register</text>
+<path d="M138.0,78.0 L219.5,78.0 L223.0,88.0 L219.5,98.0 L138.0,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="180.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000010</text>
+<path d="M223.0,88.0 L226.5,78.0 L304.5,78.0 L308.0,88.0 L304.5,98.0 L226.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="265.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000014</text>
+<path d="M308.0,88.0 L311.5,78.0 L389.5,78.0 L393.0,88.0 L389.5,98.0 L311.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="350.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000018</text>
+<path d="M393.0,88.0 L396.5,78.0 L474.5,78.0 L478.0,88.0 L474.5,98.0 L396.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="435.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000001c</text>
+<path d="M478.0,88.0 L481.5,78.0 L559.5,78.0 L563.0,88.0 L559.5,98.0 L481.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="520.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000020</text>
+<path d="M563.0,88.0 L566.5,78.0 L644.5,78.0 L648.0,88.0 L644.5,98.0 L566.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="605.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000024</text>
+<path d="M648.0,88.0 L651.5,78.0 L729.5,78.0 L733.0,88.0 L729.5,98.0 L651.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="690.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000028</text>
+<path d="M733.0,88.0 L736.5,78.0 L814.5,78.0 L818.0,88.0 L814.5,98.0 L736.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="775.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000002c</text>
+<path d="M818.0,88.0 L821.5,78.0 L899.5,78.0 L903.0,88.0 L899.5,98.0 L821.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="860.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000034</text>
+<path d="M903.0,88.0 L906.5,78.0 L988.0,78.0 L988.0,98.0 L906.5,98.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="945.5" y="92.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000003c</text>
+<text x="10" y="123.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">instr</text>
+<text x="10" y="134.0" font-size="10" fill="#5a6866">instruction this cycle</text>
+<path d="M138.0,108.0 L219.5,108.0 L223.0,123.0 L219.5,138.0 L138.0,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="180.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">lui</text>
+<text x="180.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x5,0x8</text>
+<path d="M223.0,123.0 L226.5,108.0 L304.5,108.0 L308.0,123.0 L304.5,138.0 L226.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="265.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">lw</text>
+<text x="265.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x6,0(x5)</text>
+<path d="M308.0,123.0 L311.5,108.0 L389.5,108.0 L393.0,123.0 L389.5,138.0 L311.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="350.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">lui</text>
+<text x="350.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x10,0x12345</text>
+<path d="M393.0,123.0 L396.5,108.0 L474.5,108.0 L478.0,123.0 L474.5,138.0 L396.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="435.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">addi</text>
+<text x="435.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x10,x10,1656</text>
+<path d="M478.0,123.0 L481.5,108.0 L559.5,108.0 L563.0,123.0 L559.5,138.0 L481.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="520.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">bne</text>
+<text x="520.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x6,x10,fail</text>
+<path d="M563.0,123.0 L566.5,108.0 L644.5,108.0 L648.0,123.0 L644.5,138.0 L566.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="605.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">sw</text>
+<text x="605.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x3,4(x5)</text>
+<path d="M648.0,123.0 L651.5,108.0 L729.5,108.0 L733.0,123.0 L729.5,138.0 L651.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="690.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">lw</text>
+<text x="690.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x7,4(x5)</text>
+<path d="M733.0,123.0 L736.5,108.0 L814.5,108.0 L818.0,123.0 L814.5,138.0 L736.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="775.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">beq</text>
+<text x="775.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x7,x3,ok</text>
+<path d="M818.0,123.0 L821.5,108.0 L899.5,108.0 L903.0,123.0 L899.5,138.0 L821.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="860.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">jal</text>
+<text x="860.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x1,done</text>
+<path d="M903.0,123.0 L906.5,108.0 L988.0,108.0 L988.0,138.0 L906.5,138.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="945.5" y="121.2" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">lui</text>
+<text x="945.5" y="132.5" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.0" text-anchor="middle" fill="#18201f">x8,0x10</text>
+<text x="10" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">alu_y</text>
+<text x="10" y="169.0" font-size="10" fill="#5a6866">ALU result</text>
+<path d="M138.0,148.0 L304.5,148.0 L308.0,158.0 L304.5,168.0 L138.0,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="223.0" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00008000</text>
+<path d="M308.0,158.0 L311.5,148.0 L389.5,148.0 L393.0,158.0 L389.5,168.0 L311.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="350.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">12345000</text>
+<path d="M393.0,158.0 L396.5,148.0 L474.5,148.0 L478.0,158.0 L474.5,168.0 L396.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="435.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">12345678</text>
+<path d="M478.0,158.0 L481.5,148.0 L559.5,148.0 L563.0,158.0 L559.5,168.0 L481.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="520.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">2468acf0</text>
+<path d="M563.0,158.0 L566.5,148.0 L729.5,148.0 L733.0,158.0 L729.5,168.0 L566.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="648.0" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00008004</text>
+<path d="M733.0,158.0 L736.5,148.0 L814.5,148.0 L818.0,158.0 L814.5,168.0 L736.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="775.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000018</text>
+<path d="M818.0,158.0 L821.5,148.0 L899.5,148.0 L903.0,158.0 L899.5,168.0 L821.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="860.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000000</text>
+<path d="M903.0,158.0 L906.5,148.0 L988.0,148.0 L988.0,168.0 L906.5,168.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="945.5" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00010000</text>
+<text x="10" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">result</text>
+<text x="10" y="199.0" font-size="10" fill="#5a6866">write-back value</text>
+<path d="M138.0,178.0 L219.5,178.0 L223.0,188.0 L219.5,198.0 L138.0,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="180.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00008000</text>
+<path d="M223.0,188.0 L226.5,178.0 L304.5,178.0 L308.0,188.0 L304.5,198.0 L226.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="265.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">12345678</text>
+<path d="M308.0,188.0 L311.5,178.0 L389.5,178.0 L393.0,188.0 L389.5,198.0 L311.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="350.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">12345000</text>
+<path d="M393.0,188.0 L396.5,178.0 L474.5,178.0 L478.0,188.0 L474.5,198.0 L396.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="435.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">12345678</text>
+<path d="M478.0,188.0 L481.5,178.0 L559.5,178.0 L563.0,188.0 L559.5,198.0 L481.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="520.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">2468acf0</text>
+<path d="M563.0,188.0 L566.5,178.0 L644.5,178.0 L648.0,188.0 L644.5,198.0 L566.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="605.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00008004</text>
+<path d="M648.0,188.0 L651.5,178.0 L729.5,178.0 L733.0,188.0 L729.5,198.0 L651.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="690.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000000c</text>
+<path d="M733.0,188.0 L736.5,178.0 L814.5,178.0 L818.0,188.0 L814.5,198.0 L736.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="775.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000018</text>
+<path d="M818.0,188.0 L821.5,178.0 L899.5,178.0 L903.0,188.0 L899.5,198.0 L821.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="860.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000038</text>
+<path d="M903.0,188.0 L906.5,178.0 L988.0,178.0 L988.0,198.0 L906.5,198.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="945.5" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00010000</text>
+<text x="10" y="216.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">reg_write</text>
+<text x="10" y="227.0" font-size="10" fill="#5a6866">regfile write enable</text>
+<rect x="138.0" y="208" width="340.0" height="16" fill="#cfe7e5"/>
+<rect x="648.0" y="208" width="85.0" height="16" fill="#cfe7e5"/>
+<rect x="818.0" y="208" width="170.0" height="16" fill="#cfe7e5"/>
+<path d="M138.0,208.0 L478.0,208.0 L478.0,224.0 L648.0,224.0 L648.0,208.0 L733.0,208.0 L733.0,224.0 L818.0,224.0 L818.0,208.0 L988.0,208.0" fill="none" stroke="#0f6b74" stroke-width="1.4" stroke-linejoin="miter"/>
+<text x="10" y="242.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">dmem_we</text>
+<text x="10" y="253.0" font-size="10" fill="#5a6866">data memory write</text>
+<rect x="563.0" y="234" width="85.0" height="16" fill="#f6dfae"/>
+<path d="M138.0,250.0 L563.0,250.0 L563.0,234.0 L648.0,234.0 L648.0,250.0 L988.0,250.0" fill="none" stroke="#8a5a00" stroke-width="1.4" stroke-linejoin="miter"/>
+<text x="10" y="268.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">pc_src</text>
+<text x="10" y="279.0" font-size="10" fill="#5a6866">take branch/jump</text>
+<rect x="733.0" y="260" width="170.0" height="16" fill="#f2caca"/>
+<path d="M138.0,276.0 L733.0,276.0 L733.0,260.0 L903.0,260.0 L903.0,276.0 L988.0,276.0" fill="none" stroke="#a33a3a" stroke-width="1.4" stroke-linejoin="miter"/>
+<text x="10" y="296.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="600" fill="#18201f">pc_next</text>
+<text x="10" y="307.0" font-size="10" fill="#5a6866">next PC</text>
+<path d="M138.0,286.0 L219.5,286.0 L223.0,296.0 L219.5,306.0 L138.0,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="180.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000014</text>
+<path d="M223.0,296.0 L226.5,286.0 L304.5,286.0 L308.0,296.0 L304.5,306.0 L226.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="265.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000018</text>
+<path d="M308.0,296.0 L311.5,286.0 L389.5,286.0 L393.0,296.0 L389.5,306.0 L311.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="350.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000001c</text>
+<path d="M393.0,296.0 L396.5,286.0 L474.5,286.0 L478.0,296.0 L474.5,306.0 L396.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="435.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000020</text>
+<path d="M478.0,296.0 L481.5,286.0 L559.5,286.0 L563.0,296.0 L559.5,306.0 L481.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="520.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000024</text>
+<path d="M563.0,296.0 L566.5,286.0 L644.5,286.0 L648.0,296.0 L644.5,306.0 L566.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="605.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000028</text>
+<path d="M648.0,296.0 L651.5,286.0 L729.5,286.0 L733.0,296.0 L729.5,306.0 L651.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="690.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000002c</text>
+<path d="M733.0,296.0 L736.5,286.0 L814.5,286.0 L818.0,296.0 L814.5,306.0 L736.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="775.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000034</text>
+<path d="M818.0,296.0 L821.5,286.0 L899.5,286.0 L903.0,296.0 L899.5,306.0 L821.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="860.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">0000003c</text>
+<path d="M903.0,296.0 L906.5,286.0 L988.0,286.0 L988.0,306.0 L906.5,306.0 Z" fill="#ffffff" stroke="#18201f" stroke-width="1"/>
+<text x="945.5" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="11.5" text-anchor="middle" fill="#18201f">00000040</text>
+<text x="10" y="336" font-size="10" fill="#5a6866">Drawn by tools/vcd2svg.py from build/sc/smoke.vcd (tb/sc_core_tb.sv +vcd=), Icarus Verilog 12.</text>
+</svg>

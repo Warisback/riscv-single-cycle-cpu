@@ -1,0 +1,42 @@
+# 2026-10-15T07:35:09Z  full regression (tool versions: results/tool_versions.log)
+PASS alu_tb: 162361 checks (2361 directed, 160000 random = 10000 per alu_ctrl code), 0 errors, seed=1
+PASS aludec_tb: 162 directed + 3615 random checks, 0 errors (seed=1)
+PASS maindec_tb: 135 directed + 2000 random checks, 0 errors (seed=1)
+PASS branch_unit_tb: 21664 checks (1664 directed, 20000 random), 0 errors, seed=1
+PASS immgen_tb: 26528 checks (golden 36, directed 492, random 26000), 10128 model self-checks, 0 errors, seed=1
+PASS load_unit_tb: 84328 checks, 0 errors (seed=1)
+PASS store_unit_tb: 64624 checks, 0 errors (seed=1)
+PASS regfile_tb: 120792 checks, 0 errors, seed=1
+PASS mem_tb: 213 directed + 7699 random checks, seed=1, hex=tb/mem_test.hex
+PASS unit: 9/9 testbenches passed
+PASS immgen_adv_tb: 91535 checks (asm directed 307, asm random 18000, field scramble 18307, unused imm_src 54921), 18307 vectors, 0 errors, seed=1
+PASS alu_adv_tb: 109344 checks (54672 file-order + 54672 random-replay of 54672 Python-oracle vectors, min 3411 per alu_ctrl code), 0 errors, seed=1
+PASS branch_unit_adv_tb: 249016 checks (199016 file vectors in order, 50000 random-order replays), 0 errors, seed=1, vec=build/branch_unit_adv_vectors.hex
+PASS decoder_adv_tb: 972 GNU-as words, 42/42 RV32I instructions, 33272 checks, 0 errors (seed=1)
+PASS loadstore_adv_tb: 139302 checks (26434 python vectors, 20000 random steps), 0 errors (seed=1)
+PASS mem_adv: 8/8 image cases passed (logs in results/mem_adv/)
+PASS iss_adv_test: 18737 checks, 0 errors (seed 1)
+PASS adv: 7/7 checks passed
+PASS riscv-tests on ISS: 40 passed, 0 failed, 2 skipped
+PASS smoke: 1/1 programs passed
+PASS riscv-tests (rv32ui): 40/40 programs passed
+PASS random, seeds 1..200, RAND_N=300: 200/200 programs passed
+PASS random, seeds 1001..1020, RAND_N=2000: 20/20 programs passed
+PASS mutants: 10 of 10 killed (control copy passed every program)
+PASS regfile_mut: control passed, 2 of 2 planted bugs caught
+PASS 17 instructions, 17 cycles, CPI 1.000, 0 assertion failures
+PASS wave: build/sc/smoke.vcd and docs/images/timing_smoke.svg written
+PASS lint: 16 testbenches and the RTL they use compile with no warnings
+PASS regression: 8/8 steps passed
+TOTAL all groups: programs=261 passed=261 instructions=90494 cycles=90494
+# Wall-clock seconds of each step. Each program group inside run_all_sc.sh all
+# gives its own time on the last line of its log.
+#      9  tools/run_unit_all.sh
+#     45  tools/run_adv_all.sh
+#    100  tools/run_riscv_tests_iss.sh
+#    594  tools/run_all_sc.sh all
+#    561  tools/mutate_sc.sh
+#      5  tools/regfile_mut.sh
+#      3  tools/make_wave_fig.sh
+#      1  tools/lint_sc.sh
+# elapsed 1318 s

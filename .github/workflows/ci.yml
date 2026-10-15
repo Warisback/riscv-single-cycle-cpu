@@ -1,0 +1,45 @@
+name: simulation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simulation:
+    name: simulation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Icarus Verilog and RISC-V binutils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends iverilog binutils-riscv64-unknown-elf
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install pcpp
+        run: python -m pip install -r requirements.txt
+
+      - name: Fetch riscv-tests and check the tools
+        run: make deps
+
+      - name: Record the tool versions
+        run: make versions
+
+      - name: Lint, unit, independent-oracle, smoke, riscv-tests and 20 random programs
+        run: make check
+
+      - name: Keep the logs
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: results
+          path: results/

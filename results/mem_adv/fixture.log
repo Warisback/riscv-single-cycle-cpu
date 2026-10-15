@@ -1,0 +1,10 @@
+# 2026-10-15T07:35:43Z  iverilog 12.0 (stable) ()
+WARNING: rtl/imem.sv:26: $readmemh(tb/mem_test.hex): Not enough words in the file for the requested range [0:16383].
+WARNING: rtl/dmem.sv:39: $readmemh(tb/mem_test.hex): Not enough words in the file for the requested range [0:16383].
+mem_adv_tb: hex=tb/mem_test.hex bin=build/mem_test/mem_test.bin (64 bytes), seed 9
+coverage: be writes 0000=2471 0001=822 0010=840 0011=1323 0100=881 0101=367 0110=392 0111=377
+coverage: be writes 1000=885 1001=373 1010=373 1011=375 1100=1408 1101=386 1110=380 1111=2464
+coverage: ops=20074 we0=5957 glitches=7379 interleaved_reads=20254 alias_addrs=67195 write_then_same_word=3053
+PASS mem_adv_tb: 176591 checks, 20074 ops, seed=9, hex=tb/mem_test.hex, bin=build/mem_test/mem_test.bin (64 bytes)
+tb/mem_adv_tb.sv:396: $finish called at 266774000 (1ps)
+# elapsed 2 s

@@ -1,0 +1,7 @@
+# Keep LF line endings in the repository and in every checkout: bash in WSL or
+# Linux fails on scripts with CRLF line endings.
+* text=auto eol=lf
+
+*.png binary
+*.pdf binary
+*.vcd binary

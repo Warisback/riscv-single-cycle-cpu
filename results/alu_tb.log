@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:09Z  iverilog 12.0 (stable) ()
+INFO random: SLT and SLTU disagreed on 4502 of 10000 SLT cases; SRA and SRL differed on 3481 of 10000 SRA cases
+PASS alu_tb: 162361 checks (2361 directed, 160000 random = 10000 per alu_ctrl code), 0 errors, seed=1
+tb/alu_tb.sv:270: $finish called at 162361000 (1ps)
+# elapsed 3 s

@@ -1,0 +1,14 @@
+# 2026-10-15T07:48:11Z  planted bugs in the single-cycle core (40 riscv-tests, random programs 1..10)
+none_control       SURVIVED riscv-tests failing  0/40 (first: -     )  random failing  0/10   CONTROL: no change; must SURVIVE or the harness itself is broken
+jalr_bit0_kept     KILLED   riscv-tests failing  0/40 (first: -     )  random failing 10/10   JALR does not clear bit 0 of its target
+x0_writable        KILLED   riscv-tests failing 21/40 (first: add   )  random failing 10/10   writes to x0 are not dropped
+link_is_alu        KILLED   riscv-tests failing  3/40 (first: auipc )  random failing 10/10   JAL/JALR write the ALU result instead of pc+4
+auipc_zero         KILLED   riscv-tests failing 13/40 (first: auipc )  random failing 10/10   AUIPC adds the immediate to 0 instead of the PC
+srcb_always_imm    KILLED   riscv-tests failing 11/40 (first: add   )  random failing 10/10   R-type instructions use the immediate instead of rs2
+jal_not_taken      KILLED   riscv-tests failing  4/40 (first: jal   )  random failing 10/10   JAL writes its link but does not jump
+blt_unsigned       KILLED   riscv-tests failing  2/40 (first: bge   )  random failing  8/10   BLT/BGE compare unsigned
+sra_as_srl         KILLED   riscv-tests failing  3/40 (first: lui   )  random failing  9/10   SRA shifts in zeros
+lb_zero_extend     KILLED   riscv-tests failing  4/40 (first: lb    )  random failing 10/10   LB zero-extends
+store_ignores_be   KILLED   riscv-tests failing  2/40 (first: sb    )  random failing  9/10   every store writes the whole word
+PASS mutants: 10 of 10 killed (control copy passed every program)
+# elapsed 508 s

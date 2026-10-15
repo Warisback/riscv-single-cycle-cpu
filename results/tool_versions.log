@@ -1,0 +1,14 @@
+# 2026-10-15T07:35:08Z  tool versions
+os:                      Ubuntu 26.04.1 LTS, kernel 6.18.54.1-microsoft-standard-WSL2
+bash:                    GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+iverilog -V:             Icarus Verilog version 12.0 (stable) ()
+vvp -V:                  Icarus Verilog runtime version 12.0 (stable) ()
+assembler:               deps/rv/usr/bin/riscv64-unknown-elf-as
+as --version:            GNU assembler (2.45.50.20251209-1ubuntu1+7build1) 2.45.50.20251209
+ld --version:            GNU ld (2.45.50.20251209-1ubuntu1+7build1) 2.45.50.20251209
+objcopy --version:       GNU objcopy (2.45.50.20251209-1ubuntu1+7build1) 2.45.50.20251209
+objdump --version:       GNU objdump (2.45.50.20251209-1ubuntu1+7build1) 2.45.50.20251209
+python3 --version:       Python 3.14.4
+pcpp:                    pcpp 1.30
+riscv-tests commit:      7b68f7b91f827f8d94cc1c57ff123752c5c8f704
+gtkwave --version:       GTKWave Analyzer v3.3.126 (w)1999-2026 BSI (viewer only)

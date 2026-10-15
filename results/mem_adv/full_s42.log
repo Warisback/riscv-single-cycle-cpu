@@ -1,0 +1,8 @@
+# 2026-10-15T07:35:37Z  iverilog 12.0 (stable) ()
+mem_adv_tb: hex=build/mem_adv/full.hex bin=build/mem_adv/full.bin (65533 bytes), seed 42
+coverage: be writes 0000=2378 0001=840 0010=916 0011=1403 0100=863 0101=382 0110=390 0111=414
+coverage: be writes 1000=903 1001=376 1010=375 1011=416 1100=1356 1101=386 1110=373 1111=2356
+coverage: ops=20074 we0=5947 glitches=7343 interleaved_reads=20220 alias_addrs=66534 write_then_same_word=2970
+PASS mem_adv_tb: 176505 checks, 20074 ops, seed=42, hex=build/mem_adv/full.hex, bin=build/mem_adv/full.bin (65533 bytes)
+tb/mem_adv_tb.sv:396: $finish called at 266864000 (1ps)
+# elapsed 2 s

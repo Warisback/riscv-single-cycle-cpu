@@ -1,0 +1,12 @@
+# 2026-10-14T17:06:26Z  GTKWave screenshots of build/sc/smoke.vcd
+# GTKWave Analyzer v3.3.126 (w)1999-2026 BSI, signals from tools/gtkwave/smoke.gtkw
+grab: asked for 0..170000, the window shows 0..170317
+grab: asked for 0..169683, the window shows 0..169999
+GTKWAVE | Filename 'build/sc/gtkwave/gtkwave_smoke.png'
+PASS docs/images/gtkwave_smoke.png: 2410 x 736 pixels, gtkwave exit 0
+grab: asked for 85000..135000, the window shows 85000..135219
+grab: asked for 85000..134781, the window shows 85000..134999
+GTKWAVE | Filename 'build/sc/gtkwave/gtkwave_load_store_branch.png'
+PASS docs/images/gtkwave_load_store_branch.png: 1260 x 801 pixels, gtkwave exit 0
+PASS gtkwave: 2 screenshots written
+# elapsed 13 s

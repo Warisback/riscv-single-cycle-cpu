@@ -1,0 +1,7 @@
+# 2026-10-15T07:35:12Z  iverilog 12.0 (stable) ()
+random: 3615 checked, 1385 skipped (reserved encoding or no ALU op)
+random coverage (checks per alu_ctrl 0..9): 941 72 385 372 378 388 437 318 159 165
+random: 428 checks expected ADD while instr[30]=1
+PASS aludec_tb: 162 directed + 3615 random checks, 0 errors (seed=1)
+tb/aludec_tb.sv:302: $finish called at 3777000 (1ps)
+# elapsed 0 s

@@ -1,0 +1,49 @@
+# 2026-10-15T07:36:03Z  rv32ui riscv-tests on tools/iss.py
+# riscv-tests commit 7b68f7b, binutils GNU assembler (2.45.50.20251209-1ubuntu1+7build1) 2.45.50.20251209
+  add      pass  TOHOST=00000001 PASS (429 instructions)
+  addi     pass  TOHOST=00000001 PASS (206 instructions)
+  and      pass  TOHOST=00000001 PASS (449 instructions)
+  andi     pass  TOHOST=00000001 PASS (162 instructions)
+  auipc    pass  TOHOST=00000001 PASS (23 instructions)
+  beq      pass  TOHOST=00000001 PASS (255 instructions)
+  bge      pass  TOHOST=00000001 PASS (273 instructions)
+  bgeu     pass  TOHOST=00000001 PASS (298 instructions)
+  blt      pass  TOHOST=00000001 PASS (255 instructions)
+  bltu     pass  TOHOST=00000001 PASS (280 instructions)
+  bne      pass  TOHOST=00000001 PASS (255 instructions)
+  fence_i  skip  needs Zifencei and self-modifying code; imem and dmem are separate (Harvard) and imem is never written
+  jal      pass  TOHOST=00000001 PASS (19 instructions)
+  jalr     pass  TOHOST=00000001 PASS (79 instructions)
+  lb       pass  TOHOST=00000001 PASS (217 instructions)
+  lbu      pass  TOHOST=00000001 PASS (217 instructions)
+  ld_st    pass  TOHOST=00000001 PASS (927 instructions)
+  lh       pass  TOHOST=00000001 PASS (233 instructions)
+  lhu      pass  TOHOST=00000001 PASS (242 instructions)
+  lui      pass  TOHOST=00000001 PASS (29 instructions)
+  lw       pass  TOHOST=00000001 PASS (247 instructions)
+  ma_data  skip  misaligned loads/stores; this core (and the ISS) only support naturally aligned accesses
+  or       pass  TOHOST=00000001 PASS (452 instructions)
+  ori      pass  TOHOST=00000001 PASS (169 instructions)
+  sb       pass  TOHOST=00000001 PASS (418 instructions)
+  sh       pass  TOHOST=00000001 PASS (471 instructions)
+  simple   pass  TOHOST=00000001 PASS (5 instructions)
+  sll      pass  TOHOST=00000001 PASS (457 instructions)
+  slli     pass  TOHOST=00000001 PASS (205 instructions)
+  slt      pass  TOHOST=00000001 PASS (423 instructions)
+  slti     pass  TOHOST=00000001 PASS (201 instructions)
+  sltiu    pass  TOHOST=00000001 PASS (201 instructions)
+  sltu     pass  TOHOST=00000001 PASS (423 instructions)
+  sra      pass  TOHOST=00000001 PASS (476 instructions)
+  srai     pass  TOHOST=00000001 PASS (220 instructions)
+  srl      pass  TOHOST=00000001 PASS (470 instructions)
+  srli     pass  TOHOST=00000001 PASS (214 instructions)
+  st_ld    pass  TOHOST=00000001 PASS (447 instructions)
+  sub      pass  TOHOST=00000001 PASS (421 instructions)
+  sw       pass  TOHOST=00000001 PASS (478 instructions)
+  xor      pass  TOHOST=00000001 PASS (451 instructions)
+  xori     pass  TOHOST=00000001 PASS (171 instructions)
+  passed  (40): add addi and andi auipc beq bge bgeu blt bltu bne jal jalr lb lbu ld_st lh lhu lui lw or ori sb sh simple sll slli slt slti sltiu sltu sra srai srl srli st_ld sub sw xor xori
+  failed  (0):
+  skipped (2): fence_i ma_data
+PASS riscv-tests on ISS: 40 passed, 0 failed, 2 skipped
+# elapsed 100 s

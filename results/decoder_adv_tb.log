@@ -1,0 +1,17 @@
+# 2026-10-15T07:35:26Z  iverilog 12.0 (stable) ()
+NOTE #950 mul (022081b3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=0
+NOTE #951 mulh (022091b3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=7
+NOTE #952 div (0220c1b3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=4
+NOTE #953 remu (0220f1b3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=2
+NOTE #954 csrrw (340110f3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=0 mem_write=0 alu_ctrl=0
+NOTE #955 csrrs (300020f3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=0 mem_write=0 alu_ctrl=0
+NOTE #956 csrrwi (3402d0f3) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=0 mem_write=0 alu_ctrl=0
+NOTE #957 fence.i (0000100f) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=0 mem_write=0 alu_ctrl=0
+NOTE #966 ld (00013083) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=0
+NOTE #967 sd (00113023) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=0 mem_write=1 alu_ctrl=0
+NOTE #968 lwu (00016083) is not RV32I but has an RV32I opcode: illegal=0, runs as reg_write=1 mem_write=0 alu_ctrl=0
+vectors: 950 RV32I words (13 with ADDI instr[30]=1), 22 foreign words (11 NOTEs)
+checks: 972 table, 950 format, 30400 execute, 950 rs-dependence
+PASS decoder_adv_tb: 972 GNU-as words, 42/42 RV32I instructions, 33272 checks, 0 errors (seed=1)
+tb/decoder_adv_tb.sv:456: $finish called at 31372000 (1ps)
+# elapsed 1 s

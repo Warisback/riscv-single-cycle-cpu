@@ -1,0 +1,10 @@
+# 2026-10-15T07:35:41Z  iverilog 12.0 (stable) ()
+WARNING: rtl/imem.sv:26: $readmemh(build/mem_adv/part.hex): Not enough words in the file for the requested range [0:16383].
+WARNING: rtl/dmem.sv:39: $readmemh(build/mem_adv/part.hex): Not enough words in the file for the requested range [0:16383].
+mem_adv_tb: hex=build/mem_adv/part.hex bin=build/mem_adv/part.bin (4099 bytes), seed 5
+coverage: be writes 0000=2400 0001=874 0010=932 0011=1361 0100=829 0101=370 0110=409 0111=394
+coverage: be writes 1000=869 1001=405 1010=381 1011=361 1100=1381 1101=371 1110=369 1111=2383
+coverage: ops=20074 we0=5985 glitches=7440 interleaved_reads=20196 alias_addrs=66483 write_then_same_word=3077
+PASS mem_adv_tb: 176692 checks, 20074 ops, seed=5, hex=build/mem_adv/part.hex, bin=build/mem_adv/part.bin (4099 bytes)
+tb/mem_adv_tb.sv:396: $finish called at 267554000 (1ps)
+# elapsed 2 s

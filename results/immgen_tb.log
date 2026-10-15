@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:13Z  iverilog 12.0 (stable) ()
+immgen_tb: seed=1
+PASS immgen_tb: 26528 checks (golden 36, directed 492, random 26000), 10128 model self-checks, 0 errors, seed=1
+tb/immgen_tb.sv:349: $finish called at 26528000 (1ps)
+# elapsed 2 s

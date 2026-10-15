@@ -1,0 +1,44 @@
+# 2026-10-15T07:37:47Z  riscv-tests (rv32ui) on the single-cycle core vs tools/iss.py
+  add            ISS PASS RTL PASS trace same    429 instr    429 cycles
+  addi           ISS PASS RTL PASS trace same    206 instr    206 cycles
+  and            ISS PASS RTL PASS trace same    449 instr    449 cycles
+  andi           ISS PASS RTL PASS trace same    162 instr    162 cycles
+  auipc          ISS PASS RTL PASS trace same     23 instr     23 cycles
+  beq            ISS PASS RTL PASS trace same    255 instr    255 cycles
+  bge            ISS PASS RTL PASS trace same    273 instr    273 cycles
+  bgeu           ISS PASS RTL PASS trace same    298 instr    298 cycles
+  blt            ISS PASS RTL PASS trace same    255 instr    255 cycles
+  bltu           ISS PASS RTL PASS trace same    280 instr    280 cycles
+  bne            ISS PASS RTL PASS trace same    255 instr    255 cycles
+  jal            ISS PASS RTL PASS trace same     19 instr     19 cycles
+  jalr           ISS PASS RTL PASS trace same     79 instr     79 cycles
+  lb             ISS PASS RTL PASS trace same    217 instr    217 cycles
+  lbu            ISS PASS RTL PASS trace same    217 instr    217 cycles
+  ld_st          ISS PASS RTL PASS trace same    927 instr    927 cycles
+  lh             ISS PASS RTL PASS trace same    233 instr    233 cycles
+  lhu            ISS PASS RTL PASS trace same    242 instr    242 cycles
+  lui            ISS PASS RTL PASS trace same     29 instr     29 cycles
+  lw             ISS PASS RTL PASS trace same    247 instr    247 cycles
+  or             ISS PASS RTL PASS trace same    452 instr    452 cycles
+  ori            ISS PASS RTL PASS trace same    169 instr    169 cycles
+  sb             ISS PASS RTL PASS trace same    418 instr    418 cycles
+  sh             ISS PASS RTL PASS trace same    471 instr    471 cycles
+  simple         ISS PASS RTL PASS trace same      5 instr      5 cycles
+  sll            ISS PASS RTL PASS trace same    457 instr    457 cycles
+  slli           ISS PASS RTL PASS trace same    205 instr    205 cycles
+  slt            ISS PASS RTL PASS trace same    423 instr    423 cycles
+  slti           ISS PASS RTL PASS trace same    201 instr    201 cycles
+  sltiu          ISS PASS RTL PASS trace same    201 instr    201 cycles
+  sltu           ISS PASS RTL PASS trace same    423 instr    423 cycles
+  sra            ISS PASS RTL PASS trace same    476 instr    476 cycles
+  srai           ISS PASS RTL PASS trace same    220 instr    220 cycles
+  srl            ISS PASS RTL PASS trace same    470 instr    470 cycles
+  srli           ISS PASS RTL PASS trace same    214 instr    214 cycles
+  st_ld          ISS PASS RTL PASS trace same    447 instr    447 cycles
+  sub            ISS PASS RTL PASS trace same    421 instr    421 cycles
+  sw             ISS PASS RTL PASS trace same    478 instr    478 cycles
+  xor            ISS PASS RTL PASS trace same    451 instr    451 cycles
+  xori           ISS PASS RTL PASS trace same    171 instr    171 cycles
+TOTAL programs=40 passed=40 instructions=11868 cycles=11868
+PASS riscv-tests (rv32ui): 40/40 programs passed
+# elapsed 45 s

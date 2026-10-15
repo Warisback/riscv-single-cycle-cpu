@@ -1,0 +1,5 @@
+# 2026-10-15T07:37:45Z  smoke on the single-cycle core vs tools/iss.py
+  smoke          ISS PASS RTL PASS trace same     17 instr     17 cycles
+TOTAL programs=1 passed=1 instructions=17 cycles=17
+PASS smoke: 1/1 programs passed
+# elapsed 2 s

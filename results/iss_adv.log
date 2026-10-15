@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:47Z  tools/iss_adv_test.py
+# iss_adv_test: iss=tools/iss.py seed=1 random=3000 python=3.14.4
+# checks: directed 928, random 17787 (3000 instructions, 107 expected stops), cli 20, as 2 (3182 encodings)
+PASS iss_adv_test: 18737 checks, 0 errors (seed 1)
+# elapsed 16 s

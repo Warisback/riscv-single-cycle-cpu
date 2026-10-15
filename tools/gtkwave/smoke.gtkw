@@ -1,0 +1,83 @@
+[*] GTKWave save file: sw/smoke.S on the single-cycle core, from tb/sc_core_tb.sv +vcd=
+[*] Open it from the repository root (this also makes the VCD and the alias files):
+[*]   bash tools/gtkwave_shot.sh --open
+[*] or, step by step:
+[*]   bash tools/make_wave_fig.sh
+[*]   python3 tools/gtkwave_filters.py build/sc/smoke.dump build/sc/gtkwave
+[*]   gtkwave build/sc/smoke.vcd tools/gtkwave/smoke.gtkw
+[*] Groups: clock and reset, fetch, decode, execute, register write and memory write.
+[*] instr, alu_ctrl, result_src and ret_rd are shown through the alias files.
+[*] All paths are relative to the repository root. GTKWave writes absolute paths
+[*] when it saves a session, so save your own changes to another file.
+[dumpfile] "build/sc/smoke.vcd"
+[timestart] 0
+[size] 2400 680
+[pos] -1 -1
+[sst_expanded] 0
+[signals_width] 230
+@200
+-clock and reset
+@28
+sc_core_tb.clk
+sc_core_tb.rst
+@200
+-fetch
+@22
+[color] 3
+sc_core_tb.dut.u_core.pc[31:0]
+@2022
+^1 build/sc/gtkwave/instr.txt
+[color] 3
+sc_core_tb.dut.u_core.instr[31:0]
+@200
+-decode (control)
+@28
+[color] 2
+sc_core_tb.dut.u_core.reg_write
+[color] 2
+sc_core_tb.dut.u_core.mem_write
+[color] 2
+sc_core_tb.dut.u_core.branch
+[color] 2
+sc_core_tb.dut.u_core.jump
+@2022
+^2 build/sc/gtkwave/alu_ctrl.txt
+[color] 2
+sc_core_tb.dut.u_core.alu_ctrl[3:0]
+^3 build/sc/gtkwave/result_src.txt
+[color] 2
+sc_core_tb.dut.u_core.result_src[1:0]
+@200
+-execute
+@22
+sc_core_tb.dut.u_core.rs1_val[31:0]
+sc_core_tb.dut.u_core.rs2_val[31:0]
+sc_core_tb.dut.u_core.alu_y[31:0]
+@28
+sc_core_tb.dut.u_core.pc_src
+@22
+sc_core_tb.dut.u_core.pc_next[31:0]
+@200
+-register write (retire port)
+@28
+[color] 7
+sc_core_tb.dut.u_core.ret_rd_we
+@2022
+^4 build/sc/gtkwave/reg.txt
+[color] 7
+sc_core_tb.dut.u_core.ret_rd[4:0]
+@22
+[color] 7
+sc_core_tb.dut.u_core.ret_rd_wdata[31:0]
+@200
+-memory write (retire port)
+@28
+[color] 7
+sc_core_tb.dut.u_core.ret_mem_we
+@22
+[color] 7
+sc_core_tb.dut.u_core.ret_mem_addr[31:0]
+[color] 7
+sc_core_tb.dut.u_core.ret_mem_wdata[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

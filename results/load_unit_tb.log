@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:15Z  iverilog 12.0 (stable) ()
+load_unit_tb: seed=1
+PASS load_unit_tb: 84328 checks, 0 errors (seed=1)
+tb/load_unit_tb.sv:251: $finish called at 84308000 (1ps)
+# elapsed 1 s

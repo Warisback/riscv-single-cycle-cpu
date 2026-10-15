@@ -1,0 +1,10 @@
+# 2026-10-15T07:47:36Z  single-cycle core: summary
+results/sc_smoke.log: TOTAL programs=1 passed=1 instructions=17 cycles=17
+PASS smoke: 1/1 programs passed
+results/sc_riscv.log: TOTAL programs=40 passed=40 instructions=11868 cycles=11868
+PASS riscv-tests (rv32ui): 40/40 programs passed
+results/sc_rand_n300_s1-200.log: TOTAL programs=200 passed=200 instructions=48739 cycles=48739
+PASS random, seeds 1..200, RAND_N=300: 200/200 programs passed
+results/sc_rand_n2000_s1001-1020.log: TOTAL programs=20 passed=20 instructions=29870 cycles=29870
+PASS random, seeds 1001..1020, RAND_N=2000: 20/20 programs passed
+TOTAL all groups: programs=261 passed=261 instructions=90494 cycles=90494

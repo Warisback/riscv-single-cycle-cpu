@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:18Z  iverilog 12.0 (stable) ()
+immgen_adv_tb: seed=1 vectors=build/immgen_adv/immgen_adv_vectors.hex
+PASS immgen_adv_tb: 91535 checks (asm directed 307, asm random 18000, field scramble 18307, unused imm_src 54921), 18307 vectors, 0 errors, seed=1
+tb/immgen_adv_tb.sv:135: $finish called at 91535000 (1ps)
+# elapsed 1 s

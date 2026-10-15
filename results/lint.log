@@ -1,0 +1,19 @@
+# 2026-10-15T07:57:06Z  iverilog 12.0 (stable) () -g2012 -Wall
+  tb/alu_adv_tb.sv: clean
+  tb/alu_tb.sv: clean
+  tb/aludec_tb.sv: clean
+  tb/branch_unit_adv_tb.sv: clean
+  tb/branch_unit_tb.sv: clean
+  tb/decoder_adv_tb.sv: clean
+  tb/immgen_adv_tb.sv: clean
+  tb/immgen_tb.sv: clean
+  tb/load_unit_tb.sv: clean
+  tb/loadstore_adv_tb.sv: clean
+  tb/maindec_tb.sv: clean
+  tb/mem_adv_tb.sv: clean
+  tb/mem_tb.sv: clean
+  tb/regfile_tb.sv: clean
+  tb/sc_core_tb.sv: clean
+  tb/store_unit_tb.sv: clean
+PASS lint: 16 testbenches and the RTL they use compile with no warnings
+# elapsed 1 s

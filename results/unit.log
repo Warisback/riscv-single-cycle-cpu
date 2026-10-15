@@ -1,0 +1,12 @@
+# 2026-10-15T07:35:09Z  unit testbenches
+PASS alu_tb: 162361 checks (2361 directed, 160000 random = 10000 per alu_ctrl code), 0 errors, seed=1
+PASS aludec_tb: 162 directed + 3615 random checks, 0 errors (seed=1)
+PASS maindec_tb: 135 directed + 2000 random checks, 0 errors (seed=1)
+PASS branch_unit_tb: 21664 checks (1664 directed, 20000 random), 0 errors, seed=1
+PASS immgen_tb: 26528 checks (golden 36, directed 492, random 26000), 10128 model self-checks, 0 errors, seed=1
+PASS load_unit_tb: 84328 checks, 0 errors (seed=1)
+PASS store_unit_tb: 64624 checks, 0 errors (seed=1)
+PASS regfile_tb: 120792 checks, 0 errors, seed=1
+PASS mem_tb: 213 directed + 7699 random checks, seed=1, hex=tb/mem_test.hex
+PASS unit: 9/9 testbenches passed
+# elapsed 9 s

@@ -1,0 +1,24 @@
+# 2026-10-15T07:56:58Z  how each planted bug was caught (tools/mutant_report.py)
+# From the runs that tools/mutate_sc.sh left in build/mut/<name>/: each program's
+# testbench output (<prog>.out) and RTL trace, compared with the ISS trace of the program.
+#   programs     programs run on the mutant (riscv-tests and random programs)
+#   failing      programs that failed in any way (the count in the mutate_sc.sh log)
+#   TOHOST!=1    the program stored a value other than 1 to TOHOST: its own check failed
+#   timeout      no store to TOHOST before the cycle limit (+maxcycles)
+#   trace-diff   the RTL trace differs from the ISS trace
+#   assert-only  failed only because an assertion fired (TOHOST = 1, traces identical)
+#   A1 .. A5     programs in which that assertion fired at least once (the testbench
+#                prints the first 20 assertion failures of a program)
+mutant             programs  failing  TOHOST!=1  timeout  trace-diff  assert-only   A1   A2   A3   A4   A5
+none_control             50        0          0        0           0            0    0    0    0    0    0
+jalr_bit0_kept           50       10          0        0          10            0    0    0    0    0   10
+x0_writable              50       31          0        0           0           31   31    0    0    0    0
+link_is_alu              50       13          3        0          13            0    0    0    0    0    0
+auipc_zero               50       23         10       10          23            0    0    0    0    0    0
+srcb_always_imm          50       21         11        0          21            0    0    0    0    0    0
+jal_not_taken            50       14          1        0          14            0    0    0    0    0   14
+blt_unsigned             50       10          2        0          10            0    0    0    0    0   10
+sra_as_srl               50       12          3        0          12            0    0    0    0    0    0
+lb_zero_extend           50       14          4        0          14            0    0    0    0    0    0
+store_ignores_be         50       11          2        0          11            0    0    0    0    0    0
+# The failing counts agree with results/sc_mutants.log for all 11 mutants.

@@ -1,0 +1,6 @@
+# 2026-10-15T07:56:58Z  planted bugs in rtl/regfile.sv vs tb/regfile_tb.sv
+control: PASS regfile_tb: 120792 checks, 0 errors, seed=1
+bypass: FAIL regfile_tb: 120792 checks, 415 errors, seed=1
+x0_writable: FAIL regfile_tb: 120792 checks, 40009 errors, seed=1
+PASS regfile_mut: control passed, 2 of 2 planted bugs caught
+# elapsed 5 s

@@ -1,0 +1,10 @@
+# 2026-10-15T07:35:18Z  independent-oracle checks
+PASS immgen_adv_tb: 91535 checks (asm directed 307, asm random 18000, field scramble 18307, unused imm_src 54921), 18307 vectors, 0 errors, seed=1
+PASS alu_adv_tb: 109344 checks (54672 file-order + 54672 random-replay of 54672 Python-oracle vectors, min 3411 per alu_ctrl code), 0 errors, seed=1
+PASS branch_unit_adv_tb: 249016 checks (199016 file vectors in order, 50000 random-order replays), 0 errors, seed=1, vec=build/branch_unit_adv_vectors.hex
+PASS decoder_adv_tb: 972 GNU-as words, 42/42 RV32I instructions, 33272 checks, 0 errors (seed=1)
+PASS loadstore_adv_tb: 139302 checks (26434 python vectors, 20000 random steps), 0 errors (seed=1)
+PASS mem_adv: 8/8 image cases passed (logs in results/mem_adv/)
+PASS iss_adv_test: 18737 checks, 0 errors (seed 1)
+PASS adv: 7/7 checks passed
+# elapsed 45 s

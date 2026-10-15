@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:13Z  iverilog 12.0 (stable) ()
+random coverage (taken/not taken): BEQ 692/1764  BNE 1803/659  BLT 892/1570  BGE 1583/884  BLTU 928/1579  BGEU 1587/924  f3=010 0/2499  f3=011 0/2636
+PASS branch_unit_tb: 21664 checks (1664 directed, 20000 random), 0 errors, seed=1
+tb/branch_unit_tb.sv:195: $finish called at 21664000 (1ps)
+# elapsed 0 s

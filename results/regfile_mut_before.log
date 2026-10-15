@@ -1,0 +1,5 @@
+# 2026-10-14T12:05:09Z  planted bugs in rtl/regfile.sv vs tb/regfile_tb.sv
+bypass: FAIL before edge: ra1=x7 rd1=12345678 expected a5a50007
+bypass: FAIL before edge: ra1=x7 rd1=0badf00d expected 12345678
+bypass: FAIL before edge: ra1=x8 rd1=e6b681cd expected 13471826
+x0_writable: PASS regfile_tb: 80528 checks, 0 errors, seed=1

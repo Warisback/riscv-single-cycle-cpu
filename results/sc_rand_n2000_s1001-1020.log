@@ -1,0 +1,24 @@
+# 2026-10-15T07:46:43Z  random, seeds 1001..1020, RAND_N=2000 on the single-cycle core vs tools/iss.py
+  rand_1001      ISS PASS RTL PASS trace same   1472 instr   1472 cycles
+  rand_1002      ISS PASS RTL PASS trace same   1477 instr   1477 cycles
+  rand_1003      ISS PASS RTL PASS trace same   1505 instr   1505 cycles
+  rand_1004      ISS PASS RTL PASS trace same   1501 instr   1501 cycles
+  rand_1005      ISS PASS RTL PASS trace same   1444 instr   1444 cycles
+  rand_1006      ISS PASS RTL PASS trace same   1489 instr   1489 cycles
+  rand_1007      ISS PASS RTL PASS trace same   1529 instr   1529 cycles
+  rand_1008      ISS PASS RTL PASS trace same   1467 instr   1467 cycles
+  rand_1009      ISS PASS RTL PASS trace same   1494 instr   1494 cycles
+  rand_1010      ISS PASS RTL PASS trace same   1501 instr   1501 cycles
+  rand_1011      ISS PASS RTL PASS trace same   1564 instr   1564 cycles
+  rand_1012      ISS PASS RTL PASS trace same   1485 instr   1485 cycles
+  rand_1013      ISS PASS RTL PASS trace same   1531 instr   1531 cycles
+  rand_1014      ISS PASS RTL PASS trace same   1506 instr   1506 cycles
+  rand_1015      ISS PASS RTL PASS trace same   1495 instr   1495 cycles
+  rand_1016      ISS PASS RTL PASS trace same   1494 instr   1494 cycles
+  rand_1017      ISS PASS RTL PASS trace same   1459 instr   1459 cycles
+  rand_1018      ISS PASS RTL PASS trace same   1516 instr   1516 cycles
+  rand_1019      ISS PASS RTL PASS trace same   1480 instr   1480 cycles
+  rand_1020      ISS PASS RTL PASS trace same   1461 instr   1461 cycles
+TOTAL programs=20 passed=20 instructions=29870 cycles=29870
+PASS random, seeds 1001..1020, RAND_N=2000: 20/20 programs passed
+# elapsed 53 s

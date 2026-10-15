@@ -1,0 +1,10 @@
+# 2026-10-15T07:35:45Z  iverilog 12.0 (stable) ()
+imem: no +hex=<file> plusarg, memory starts all zero
+dmem: no +hex=<file> plusarg, memory starts all zero
+mem_adv_tb: hex=none bin=none (0 bytes), seed 11
+coverage: be writes 0000=2343 0001=907 0010=835 0011=1357 0100=879 0101=386 0110=385 0111=387
+coverage: be writes 1000=899 1001=359 1010=395 1011=402 1100=1343 1101=360 1110=387 1111=2392
+coverage: ops=20074 we0=6058 glitches=7455 interleaved_reads=20192 alias_addrs=66740 write_then_same_word=2974
+PASS mem_adv_tb: 176753 checks, 20074 ops, seed=11, hex=none, bin=none (0 bytes)
+tb/mem_adv_tb.sv:396: $finish called at 267824000 (1ps)
+# elapsed 2 s

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# wsl: run one of the tools/ scripts inside WSL, from Git Bash on Windows.
+#
+#   usage: tools/wsl <script> [args...]
+#   e.g.   tools/wsl run_unit.sh alu_tb
+#          tools/wsl run_all_sc.sh smoke
+#
+# Every script in tools/ is a bash script for Linux (or macOS). This helper
+# starts it in the WSL distribution named by $WSL_DISTRO (default: Ubuntu),
+# with the repository root as the working directory. The repository can be
+# anywhere on a Windows drive, including a path with spaces. Arguments are
+# passed through unchanged (no second round of shell expansion).
+set -u
+if [ $# -lt 1 ]; then
+  echo "usage: tools/wsl <script> [args...]   (a script in tools/, e.g. run_unit.sh)" >&2
+  exit 2
+fi
+script="$1"
+shift
+ROOT_WIN="$(cd "$(dirname "$0")/.." && pwd -W)"     # e.g. C:/work/riscv-single-cycle-cpu
+if [ ! -f "$ROOT_WIN/tools/$script" ]; then
+  echo "tools/wsl: no such script: tools/$script" >&2
+  exit 2
+fi
+MSYS_NO_PATHCONV=1 exec wsl.exe -d "${WSL_DISTRO:-Ubuntu}" --cd "$ROOT_WIN" --exec bash "tools/$script" "$@"

@@ -1,0 +1,5 @@
+# 2026-10-15T07:35:21Z  iverilog 12.0 (stable) ()
+vector coverage (taken/not taken): BEQ 1012/23802  BNE 23927/1021  BLT 11852/12914  BGE 12972/11959  BLTU 11924/12950  BGEU 12900/11968  f3=010 0/24916  f3=011 0/24899
+PASS branch_unit_adv_tb: 249016 checks (199016 file vectors in order, 50000 random-order replays), 0 errors, seed=1, vec=build/branch_unit_adv_vectors.hex
+tb/branch_unit_adv_tb.sv:142: $finish called at 249016000 (1ps)
+# elapsed 2 s

@@ -1,0 +1,32 @@
+# 2026-10-15T07:30:56Z  check, what CI runs (tool versions: results/tool_versions.log)
+PASS lint: 16 testbenches and the RTL they use compile with no warnings
+PASS alu_tb: 162361 checks (2361 directed, 160000 random = 10000 per alu_ctrl code), 0 errors, seed=1
+PASS aludec_tb: 162 directed + 3615 random checks, 0 errors (seed=1)
+PASS maindec_tb: 135 directed + 2000 random checks, 0 errors (seed=1)
+PASS branch_unit_tb: 21664 checks (1664 directed, 20000 random), 0 errors, seed=1
+PASS immgen_tb: 26528 checks (golden 36, directed 492, random 26000), 10128 model self-checks, 0 errors, seed=1
+PASS load_unit_tb: 84328 checks, 0 errors (seed=1)
+PASS store_unit_tb: 64624 checks, 0 errors (seed=1)
+PASS regfile_tb: 120792 checks, 0 errors, seed=1
+PASS mem_tb: 213 directed + 7699 random checks, seed=1, hex=tb/mem_test.hex
+PASS unit: 9/9 testbenches passed
+PASS immgen_adv_tb: 91535 checks (asm directed 307, asm random 18000, field scramble 18307, unused imm_src 54921), 18307 vectors, 0 errors, seed=1
+PASS alu_adv_tb: 109344 checks (54672 file-order + 54672 random-replay of 54672 Python-oracle vectors, min 3411 per alu_ctrl code), 0 errors, seed=1
+PASS branch_unit_adv_tb: 249016 checks (199016 file vectors in order, 50000 random-order replays), 0 errors, seed=1, vec=build/branch_unit_adv_vectors.hex
+PASS decoder_adv_tb: 972 GNU-as words, 42/42 RV32I instructions, 33272 checks, 0 errors (seed=1)
+PASS loadstore_adv_tb: 139302 checks (26434 python vectors, 20000 random steps), 0 errors (seed=1)
+PASS mem_adv: 8/8 image cases passed (logs in results/mem_adv/)
+PASS iss_adv_test: 18737 checks, 0 errors (seed 1)
+PASS adv: 7/7 checks passed
+PASS smoke: 1/1 programs passed
+PASS riscv-tests (rv32ui): 40/40 programs passed
+PASS random, seeds 1..20, RAND_N=300: 20/20 programs passed
+PASS check: 6/6 steps passed
+# Wall-clock seconds of each step.
+#      1  tools/lint_sc.sh
+#     11  tools/run_unit_all.sh
+#     48  tools/run_adv_all.sh
+#      5  tools/run_all_sc.sh smoke
+#    132  tools/run_all_sc.sh riscv
+#     43  tools/run_all_sc.sh rand 20 1 300
+# elapsed 240 s

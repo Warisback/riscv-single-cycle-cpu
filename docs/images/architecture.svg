@@ -1,0 +1,214 @@
+<svg viewBox="0 0 760 482" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Block picture of the single-cycle core: rv32i_sc_top holds imem, dmem and sc_core; inside the core the PC, the decoders, the register file, the immediate generator, the ALU, the branch unit, the target adder, the next-pc mux, the store and load units and the result mux all work in one clock cycle; the result goes back to the register file and pc_next goes back to the PC at the next rising edge; the ret_* retire port feeds the testbench, whose trace is compared with the ISS">
+  <defs>
+    <marker id="sco-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#18201f"/>
+    </marker>
+    <marker id="sco-arr-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f6b74"/>
+    </marker>
+    <marker id="sco-arr-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a5a00"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="482" fill="#ffffff"/>
+  <g font-family="Segoe UI, 'Helvetica Neue', 'DejaVu Sans', Arial, sans-serif" font-size="10" fill="#18201f">
+
+    <!-- ===== rv32i_sc_top: the core plus its two memories ===== -->
+    <rect x="6" y="6" width="748" height="338" rx="6" fill="none" stroke="#5a6866" stroke-width="1.2"/>
+    <text x="16" y="21" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-weight="600" font-size="10.5" fill="#5a6866">rv32i_sc_top.sv</text>
+
+    <g fill="#ffffff" stroke="#5a6866" stroke-width="1.1">
+      <rect x="36" y="28" width="110" height="40" rx="4"/>
+      <rect x="505" y="28" width="130" height="40" rx="4"/>
+    </g>
+    <g font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" text-anchor="middle">
+      <text x="91" y="45">imem.sv</text>
+      <text x="570" y="45">dmem.sv</text>
+    </g>
+    <g font-size="9" fill="#5a6866" text-anchor="middle">
+      <text x="91" y="60">read only</text>
+      <text x="570" y="60">byte-enable writes</text>
+      <text x="326" y="44">Harvard: two memories, both loaded</text>
+      <text x="326" y="57">from the same hex image (+hex=)</text>
+    </g>
+    <!-- dmem is written at the clock edge: clock mark on its left side -->
+    <polyline points="505,41 511,47 505,53" fill="none" stroke="#5a6866" stroke-width="1"/>
+
+    <!-- ===== sc_core ===== -->
+    <rect x="18" y="80" width="724" height="254" rx="5" fill="none" stroke="#0f6b74" stroke-width="1.3"/>
+    <text x="734" y="328" text-anchor="end" font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-weight="600" font-size="10.5" fill="#0f6b74">sc_core.sv</text>
+
+    <!-- column names: parts of ONE clock cycle, not pipeline stages -->
+    <g font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-weight="600" font-size="9.5" fill="#0f6b74" text-anchor="middle" letter-spacing="0.5">
+      <text x="116" y="100">FETCH</text>
+      <text x="228" y="100">DECODE</text>
+      <text x="408" y="100">EXECUTE</text>
+      <text x="596" y="100">MEMORY</text>
+      <text x="690" y="100">WRITE-BACK</text>
+    </g>
+    <g stroke="#0f6b74" stroke-width="0.8" opacity="0.55">
+      <line x1="30" y1="104" x2="142" y2="104"/>
+      <line x1="164" y1="104" x2="292" y2="104"/>
+      <line x1="320" y1="104" x2="496" y2="104"/>
+      <line x1="514" y1="104" x2="630" y2="104"/>
+      <line x1="648" y1="104" x2="732" y2="104"/>
+    </g>
+
+    <!-- ===== unit boxes ===== -->
+    <g fill="#e3f1f0" stroke="#0f6b74" stroke-width="1">
+      <!-- FETCH -->
+      <rect x="56" y="150" width="60" height="36" rx="3"/>
+      <rect x="62" y="206" width="48" height="22" rx="3" fill="#ffffff"/>
+      <!-- DECODE -->
+      <rect x="164" y="126" width="128" height="36" rx="3"/>
+      <rect x="164" y="172" width="128" height="56" rx="3"/>
+      <rect x="164" y="240" width="128" height="32" rx="3"/>
+      <!-- EXECUTE -->
+      <rect x="320" y="126" width="104" height="36" rx="3"/>
+      <rect x="440" y="126" width="56" height="36" rx="3" fill="#ffffff"/>
+      <rect x="320" y="268" width="104" height="32" rx="3"/>
+      <!-- MEMORY -->
+      <rect x="532" y="126" width="74" height="36" rx="3"/>
+      <rect x="536" y="232" width="94" height="32" rx="3"/>
+    </g>
+    <!-- muxes and the ALU -->
+    <g fill="#ffffff" stroke="#0f6b74" stroke-width="1">
+      <polygon points="324,172 338,179 338,201 324,208"/>
+      <polygon points="324,214 338,221 338,243 324,250"/>
+      <polygon points="652,182 670,190 670,262 652,270"/>
+    </g>
+    <polygon points="352,178 394,192 394,230 352,244 352,218 360,211 352,204" fill="#e3f1f0" stroke="#0f6b74" stroke-width="1"/>
+
+    <!-- clock marks on the state elements: PC and regfile -->
+    <g fill="none" stroke="#0f6b74" stroke-width="1">
+      <polyline points="60,186 66,180 72,186"/>
+      <polyline points="168,228 174,222 180,228"/>
+    </g>
+
+    <!-- unit names -->
+    <g font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">
+      <text x="86" y="172" font-size="11.5">PC</text>
+      <text x="86" y="221">+4</text>
+      <text x="228" y="141">maindec + aludec</text>
+      <text x="228" y="190">regfile.sv</text>
+      <text x="228" y="255">immgen.sv</text>
+      <text x="372" y="141">branch_unit</text>
+      <text x="468" y="141" font-size="9">next-pc</text>
+      <text x="372" y="282" font-size="9.5">target adder</text>
+      <text x="569" y="141" font-size="9.5">store_unit</text>
+      <text x="583" y="247">load_unit</text>
+      <text x="373" y="215" font-size="10.5">ALU</text>
+    </g>
+    <g font-size="8.6" fill="#5a6866" text-anchor="middle">
+      <text x="228" y="154">control signals</text>
+      <text x="228" y="204">x0..x31: read rs1, rs2</text>
+      <text x="228" y="217">write rd at the edge</text>
+      <text x="228" y="266">I, S, B, U, J formats</text>
+      <text x="372" y="154">rs1 vs rs2: taken?</text>
+      <text x="468" y="154">mux</text>
+      <text x="372" y="294">pc or rs1, + imm</text>
+      <text x="569" y="154">lanes, be</text>
+      <text x="569" y="176">(gets rs2 too)</text>
+      <text x="583" y="259">pick, extend</text>
+      <text x="331" y="194" font-size="8">A</text>
+      <text x="331" y="236" font-size="8">B</text>
+    </g>
+    <text x="320" y="262" font-size="8.4" fill="#5a6866">A: rs1/pc/0, B: rs2/imm</text>
+
+    <!-- ===== forward (combinational) wires ===== -->
+    <g fill="none" stroke="#18201f" stroke-width="1.1">
+      <!-- pc to imem, pc to +4 -->
+      <line x1="86" y1="150" x2="86" y2="70" marker-end="url(#sco-arr)"/>
+      <line x1="86" y1="186" x2="86" y2="204" marker-end="url(#sco-arr)"/>
+      <!-- instr bus from imem to the decode column -->
+      <polyline points="146,48 156,48 156,256"/>
+      <line x1="156" y1="144" x2="162" y2="144" marker-end="url(#sco-arr)"/>
+      <line x1="156" y1="190" x2="162" y2="190" marker-end="url(#sco-arr)"/>
+      <line x1="156" y1="256" x2="162" y2="256" marker-end="url(#sco-arr)"/>
+      <!-- rs1 to mux A and the branch unit -->
+      <line x1="292" y1="184" x2="322" y2="184" marker-end="url(#sco-arr)"/>
+      <polyline points="300,184 300,150 318,150" marker-end="url(#sco-arr)"/>
+      <!-- rs2 to mux B and the branch unit (hops over rs1) -->
+      <line x1="292" y1="220" x2="322" y2="220" marker-end="url(#sco-arr)"/>
+      <path d="M308,220 V188 A4 4 0 0 0 308 180 V138 H318" marker-end="url(#sco-arr)"/>
+      <!-- immediate to mux B and the target adder -->
+      <polyline points="292,256 314,256 314,242 322,242" marker-end="url(#sco-arr)"/>
+      <polyline points="314,256 314,284 318,284" marker-end="url(#sco-arr)"/>
+      <!-- muxes into the ALU -->
+      <line x1="338" y1="190" x2="350" y2="190" marker-end="url(#sco-arr)"/>
+      <line x1="338" y1="232" x2="350" y2="232" marker-end="url(#sco-arr)"/>
+      <!-- ALU result: to the result mux, branch up to dmem address -->
+      <line x1="394" y1="211" x2="650" y2="211" marker-end="url(#sco-arr)"/>
+      <line x1="516" y1="211" x2="516" y2="70" marker-end="url(#sco-arr)"/>
+      <!-- store unit to dmem, dmem to load unit (hops over alu_y), load unit to result mux -->
+      <line x1="569" y1="126" x2="569" y2="70" marker-end="url(#sco-arr)"/>
+      <path d="M624,68 V207 A4 4 0 0 1 624 215 V230" marker-end="url(#sco-arr)"/>
+      <line x1="630" y1="248" x2="650" y2="248" marker-end="url(#sco-arr)"/>
+      <!-- target adder (hops over alu_y) and the branch decision into the next-pc mux -->
+      <path d="M424,284 H430 V215 A4 4 0 0 0 430 207 V156 H438" marker-end="url(#sco-arr)"/>
+      <line x1="424" y1="136" x2="438" y2="136" marker-end="url(#sco-arr)"/>
+      <!-- pc+4 stubs: out of the +4 adder, into the next-pc mux and the result mux -->
+      <line x1="110" y1="217" x2="138" y2="217" marker-end="url(#sco-arr)"/>
+      <line x1="484" y1="190" x2="484" y2="164" marker-end="url(#sco-arr)"/>
+      <line x1="630" y1="196" x2="650" y2="196" marker-end="url(#sco-arr)"/>
+    </g>
+    <g fill="#18201f">
+      <circle cx="516" cy="211" r="2.2"/>
+      <circle cx="300" cy="184" r="2.2"/>
+      <circle cx="308" cy="220" r="2.2"/>
+      <circle cx="314" cy="256" r="2.2"/>
+      <circle cx="156" cy="144" r="2.2"/>
+      <circle cx="156" cy="190" r="2.2"/>
+    </g>
+
+    <g font-size="8.6" fill="#5a6866">
+      <text x="150" y="40">instr</text>
+      <text x="90" y="134">pc</text>
+      <text x="113" y="212">pc+4</text>
+      <text x="629" y="191">pc+4</text>
+      <text x="488" y="186">pc+4</text>
+      <text x="466" y="207">alu_y</text>
+      <text x="519" y="119">addr</text>
+      <text x="572" y="119">be, wdata</text>
+      <text x="627" y="119">rdata</text>
+      <text x="661" y="178" text-anchor="middle" font-weight="600" fill="#0f6b74">result</text>
+    </g>
+
+    <!-- ===== the two loops closed by the clock edge ===== -->
+    <!-- pc_next back to the PC (brown); hops over the instr bus and the pc wire -->
+    <path d="M468,126 V116 H160 A4 4 0 0 0 152 116 H90 A4 4 0 0 0 82 116 H30 V168 H54" fill="none" stroke="#8a5a00" stroke-width="1.4" marker-end="url(#sco-arr-b)"/>
+    <text x="176" y="112" font-size="9" fill="#8a5a00" font-weight="600">pc_next, loaded into the PC at the rising edge</text>
+    <!-- result back to the register file write port (teal), into its lower edge; hops over the immediate -->
+    <path d="M670,226 H700 V312 H296 V260 A4 4 0 0 0 296 252 V234 H250 V230" fill="none" stroke="#0f6b74" stroke-width="1.4" marker-end="url(#sco-arr-t)"/>
+    <text x="404" y="326" font-size="9" fill="#0f6b74" font-weight="600" text-anchor="middle">result, written to rd at the rising edge</text>
+
+    <!-- ===== retire port and the testbench side ===== -->
+    <rect x="6" y="362" width="748" height="114" rx="6" fill="none" stroke="#5a6866" stroke-width="1" stroke-dasharray="5 3"/>
+    <text x="16" y="378" font-size="9.5" font-weight="600" fill="#5a6866">testbench side (not hardware)</text>
+
+    <line x1="590" y1="334" x2="590" y2="386" stroke="#0f6b74" stroke-width="1.6" marker-end="url(#sco-arr-t)"/>
+    <text x="598" y="378" font-size="9.5" font-weight="600" fill="#0f6b74">ret_* retire port</text>
+
+    <g fill="#ffffff" stroke="#0f6b74" stroke-width="1.2">
+      <rect x="440" y="388" width="300" height="74" rx="5" fill="#e3f1f0"/>
+      <rect x="20" y="388" width="180" height="42" rx="5"/>
+      <rect x="240" y="388" width="160" height="42" rx="5"/>
+    </g>
+    <rect x="20" y="440" width="380" height="24" rx="5" fill="#e4f2e8" stroke="#2f7d4a" stroke-width="1.2"/>
+    <g font-family="Cascadia Mono, Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">
+      <text x="590" y="405">tb/sc_core_tb.sv</text>
+      <text x="110" y="405">tools/iss.py</text>
+      <text x="320" y="405">tools/compare.py</text>
+    </g>
+    <g font-size="9" text-anchor="middle">
+      <text x="590" y="420">trace built only from ret_*</text>
+      <text x="590" y="434">assertions A1-A5 every cycle</text>
+      <text x="590" y="448">run ends at the store to TOHOST (0xFFF0)</text>
+      <text x="110" y="421" fill="#5a6866">expected trace, same hex image</text>
+      <text x="320" y="421" fill="#5a6866">identical line for line?</text>
+      <text x="210" y="456">PASS only if both say TOHOST = 1, no assertion fails, traces identical</text>
+    </g>
+    <line x1="200" y1="409" x2="238" y2="409" stroke="#18201f" stroke-width="1.1" marker-end="url(#sco-arr)"/>
+    <line x1="440" y1="409" x2="402" y2="409" stroke="#18201f" stroke-width="1.1" marker-end="url(#sco-arr)"/>
+  </g>
+</svg>
